@@ -76,23 +76,24 @@ You should see CPU/mem numbers and (for GPU nodes) GPU utilization.
 
 ### 5. Set up cron (every 5 min)
 
+The repo includes `run.sh` — a wrapper that runs `collect.py`, commits, and
+pushes. Make it executable, test it once, then schedule it:
+
 ```bash
+chmod +x run.sh
+./run.sh                # smoke test — should produce no errors
 crontab -e
 ```
 
-Add (replace `master-1` with this master's `master_name` and the path with
-where you cloned the repo):
+Add **a single line** (cron does NOT support backslash continuation):
 
 ```cron
-*/5 * * * * cd /home/USER/lab-server-monitor && \
-  /usr/bin/python3 collect.py --config nodes.yaml --out data/master-1.json >/tmp/lsm.log 2>&1 && \
-  git add data/master-1.json && \
-  git -c user.name="lsm-bot" -c user.email="lsm@local" commit -m "snapshot $(date -u +%FT%TZ)" >/dev/null 2>&1 && \
-  git push >/tmp/lsm.log 2>&1
+*/5 * * * * /home/USER/lab-server-monitor/run.sh >> /tmp/lsm.log 2>&1
 ```
 
-> The `||` chain means: if there's nothing to commit (e.g. SSH all failed
-> identically), the cron silently no-ops. Logs in `/tmp/lsm.log`.
+Replace `/home/USER/lab-server-monitor` with the absolute path to your clone.
+Logs append to `/tmp/lsm.log`. If the snapshot didn't change since last run
+(e.g. nothing happened), `run.sh` skips the commit silently.
 
 ### 6. Verify
 

@@ -1,0 +1,398 @@
+{
+  "master_name": "master-1",
+  "generated_at": "2026-04-30T05:33:48Z",
+  "nodes": [
+    {
+      "host": "master-1",
+      "description": "Master \u2014 RTX A6000 \u00d74",
+      "is_master": true,
+      "cpu_percent": 69.9,
+      "cpu_count": 16,
+      "mem_total": 274877906944,
+      "mem_used": 241478210227,
+      "mem_percent": 40.3,
+      "load": [
+        16.56121893819681,
+        24.882139927589847,
+        18.55559257092738
+      ],
+      "gpu": {
+        "gpus": [
+          {
+            "index": 0,
+            "name": "NVIDIA RTX A6000",
+            "utilization.gpu": 81,
+            "memory.used": 1781,
+            "memory.total": 24576,
+            "temperature.gpu": 72,
+            "processes": [
+              {
+                "username": "u_7d6277",
+                "command": "python train.py",
+                "gpu_memory_usage": 5372
+              },
+              {
+                "username": "u_347a3f",
+                "command": "torchrun",
+                "gpu_memory_usage": 18670
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "NVIDIA RTX A6000",
+            "utilization.gpu": 54,
+            "memory.used": 1887,
+            "memory.total": 24576,
+            "temperature.gpu": 70,
+            "processes": [
+              {
+                "username": "u_771f54",
+                "command": "torchrun",
+                "gpu_memory_usage": 20526
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "NVIDIA RTX A6000",
+            "utilization.gpu": 25,
+            "memory.used": 52010,
+            "memory.total": 81920,
+            "temperature.gpu": 48,
+            "processes": [
+              {
+                "username": "u_d6cb4d",
+                "command": "python train.py",
+                "gpu_memory_usage": 15519
+              },
+              {
+                "username": "u_8e6f03",
+                "command": "python train.py",
+                "gpu_memory_usage": 6031
+              },
+              {
+                "username": "u_d860ea",
+                "command": "python infer.py",
+                "gpu_memory_usage": 9905
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization.gpu": 43,
+            "memory.used": 3280,
+            "memory.total": 24576,
+            "temperature.gpu": 37,
+            "processes": [
+              {
+                "username": "u_b7cc25",
+                "command": "python infer.py",
+                "gpu_memory_usage": 20582
+              }
+            ]
+          }
+        ]
+      },
+      "gpu_error": null,
+      "boot_time": 1776317628.403506
+    },
+    {
+      "host": "master-1-node-01",
+      "description": "RTX 3090 \u00d78",
+      "is_master": false,
+      "cpu_percent": 33.6,
+      "cpu_count": 64,
+      "mem_total": 274877906944,
+      "mem_used": 123093680387,
+      "mem_percent": 46.3,
+      "load": [
+        28.614477825632402,
+        26.27558821134582,
+        7.901671522532723
+      ],
+      "gpu": {
+        "gpus": [
+          {
+            "index": 0,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization.gpu": 46,
+            "memory.used": 18273,
+            "memory.total": 81920,
+            "temperature.gpu": 40,
+            "processes": [
+              {
+                "username": "u_17764b",
+                "command": "torchrun",
+                "gpu_memory_usage": 8267
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "NVIDIA RTX 4090",
+            "utilization.gpu": 29,
+            "memory.used": 9636,
+            "memory.total": 24576,
+            "temperature.gpu": 78,
+            "processes": [
+              {
+                "username": "u_bacb48",
+                "command": "python train.py",
+                "gpu_memory_usage": 12930
+              },
+              {
+                "username": "u_b5e60a",
+                "command": "python train.py",
+                "gpu_memory_usage": 9548
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization.gpu": 82,
+            "memory.used": 14701,
+            "memory.total": 24576,
+            "temperature.gpu": 52,
+            "processes": [
+              {
+                "username": "u_7d57db",
+                "command": "python train.py",
+                "gpu_memory_usage": 15947
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "NVIDIA RTX 4090",
+            "utilization.gpu": 81,
+            "memory.used": 45158,
+            "memory.total": 81920,
+            "temperature.gpu": 80,
+            "processes": [
+              {
+                "username": "u_a60862",
+                "command": "python train.py",
+                "gpu_memory_usage": 8305
+              },
+              {
+                "username": "u_106f71",
+                "command": "python infer.py",
+                "gpu_memory_usage": 13945
+              },
+              {
+                "username": "u_891555",
+                "command": "python train.py",
+                "gpu_memory_usage": 7713
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "NVIDIA RTX 4090",
+            "utilization.gpu": 40,
+            "memory.used": 15726,
+            "memory.total": 24576,
+            "temperature.gpu": 51,
+            "processes": [
+              {
+                "username": "u_eaeea1",
+                "command": "python train.py",
+                "gpu_memory_usage": 9479
+              },
+              {
+                "username": "u_477da0",
+                "command": "python train.py",
+                "gpu_memory_usage": 19194
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "NVIDIA RTX A6000",
+            "utilization.gpu": 95,
+            "memory.used": 35683,
+            "memory.total": 81920,
+            "temperature.gpu": 75,
+            "processes": [
+              {
+                "username": "u_cc7e39",
+                "command": "python infer.py",
+                "gpu_memory_usage": 7986
+              },
+              {
+                "username": "u_46d36b",
+                "command": "torchrun",
+                "gpu_memory_usage": 16971
+              },
+              {
+                "username": "u_2e8bad",
+                "command": "python train.py",
+                "gpu_memory_usage": 4392
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization.gpu": 20,
+            "memory.used": 35221,
+            "memory.total": 81920,
+            "temperature.gpu": 68,
+            "processes": [
+              {
+                "username": "u_c50038",
+                "command": "python infer.py",
+                "gpu_memory_usage": 20326
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization.gpu": 32,
+            "memory.used": 67559,
+            "memory.total": 81920,
+            "temperature.gpu": 76,
+            "processes": [
+              {
+                "username": "u_3aa686",
+                "command": "torchrun",
+                "gpu_memory_usage": 18395
+              }
+            ]
+          }
+        ]
+      },
+      "gpu_error": null,
+      "boot_time": 1776317628.403506
+    },
+    {
+      "host": "master-1-node-02",
+      "description": "RTX 4090 \u00d74",
+      "is_master": false,
+      "cpu_percent": 44.0,
+      "cpu_count": 32,
+      "mem_total": 274877906944,
+      "mem_used": 76899257653,
+      "mem_percent": 37.0,
+      "load": [
+        17.649261553717,
+        6.90344197789731,
+        6.606521533546784
+      ],
+      "gpu": {
+        "gpus": [
+          {
+            "index": 0,
+            "name": "NVIDIA RTX 4090",
+            "utilization.gpu": 64,
+            "memory.used": 12457,
+            "memory.total": 24576,
+            "temperature.gpu": 47,
+            "processes": [
+              {
+                "username": "u_98cdc1",
+                "command": "torchrun",
+                "gpu_memory_usage": 17435
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "NVIDIA RTX A6000",
+            "utilization.gpu": 19,
+            "memory.used": 36179,
+            "memory.total": 49140,
+            "temperature.gpu": 50,
+            "processes": [
+              {
+                "username": "u_004af5",
+                "command": "torchrun",
+                "gpu_memory_usage": 11421
+              },
+              {
+                "username": "u_fa2a87",
+                "command": "python train.py",
+                "gpu_memory_usage": 4465
+              },
+              {
+                "username": "u_b9d89d",
+                "command": "python infer.py",
+                "gpu_memory_usage": 8646
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "NVIDIA RTX 4090",
+            "utilization.gpu": 72,
+            "memory.used": 3123,
+            "memory.total": 24576,
+            "temperature.gpu": 45,
+            "processes": [
+              {
+                "username": "u_236fd2",
+                "command": "torchrun",
+                "gpu_memory_usage": 4920
+              },
+              {
+                "username": "u_41bc86",
+                "command": "torchrun",
+                "gpu_memory_usage": 16374
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization.gpu": 33,
+            "memory.used": 68418,
+            "memory.total": 81920,
+            "temperature.gpu": 68,
+            "processes": [
+              {
+                "username": "u_6c70d0",
+                "command": "torchrun",
+                "gpu_memory_usage": 7391
+              },
+              {
+                "username": "u_9f9947",
+                "command": "python infer.py",
+                "gpu_memory_usage": 13036
+              }
+            ]
+          }
+        ]
+      },
+      "gpu_error": null,
+      "boot_time": 1776317628.403506
+    },
+    {
+      "host": "master-1-cpu-01",
+      "description": "CPU-only worker",
+      "is_master": false,
+      "cpu_percent": 8.6,
+      "cpu_count": 16,
+      "mem_total": 274877906944,
+      "mem_used": 77832621371,
+      "mem_percent": 82.4,
+      "load": [
+        25.789062007612394,
+        2.1257204966596035,
+        7.1401390310698565
+      ],
+      "gpu": null,
+      "gpu_error": "gpustat-not-installed",
+      "boot_time": 1776317628.403506
+    },
+    {
+      "host": "master-1-node-03",
+      "description": "Down for maintenance",
+      "is_master": false,
+      "error": "ssh-timeout"
+    }
+  ]
+}

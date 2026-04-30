@@ -1,0 +1,28 @@
+# Copy this file to nodes.yaml on the master and fill in your hosts.
+# nodes.yaml is gitignored — never commit it.
+
+# Identifier for this master. Becomes the JSON filename: data/<master_name>.json
+master_name: master-1
+master_description: "Master node — RTX A6000 ×4"
+include_master: true            # collect metrics for this master too
+
+# SSH-reachable nodes from this master. Use any host alias your ~/.ssh/config
+# resolves, or a raw hostname/IP. Each node needs psutil installed (and gpustat
+# if it has GPUs).
+nodes:
+  - host: node-01
+    description: "RTX 3090 ×8"
+  - host: node-02
+    description: "RTX 4090 ×4"
+  - host: cpu-01
+    description: "CPU-only worker"
+    # ssh_user: someuser           # optional, otherwise uses current user
+
+# If true, replace usernames in gpustat process info with sha256[:6] hashes.
+# Recommended on for a public dashboard; turn off only if your repo is private
+# AND you accept that usernames are visible to anyone with the Pages URL.
+anonymize_users: true
+
+# Per-node SSH timeout (seconds). The probe also runs `cpu_percent(interval=1)`
+# so total time per node is ~timeout + 1.
+ssh_timeout_sec: 10

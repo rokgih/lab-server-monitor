@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lab Server Monitor</title>
+<script>
+  // Apply theme before body renders to avoid flash. Default: dark.
+  (function () {
+    var t = localStorage.getItem("theme") || "dark";
+    document.documentElement.dataset.theme = t;
+  })();
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Lab Server Monitor</h1>
+  <div class="header-right">
+    <span id="generated">loading…</span>
+    <button id="theme-toggle" type="button" title="Toggle theme">🌙</button>
+  </div>
+</header>
+
+<section class="legend">
+  <span><i class="dot ok"></i> idle / low</span>
+  <span><i class="dot mid"></i> active</span>
+  <span><i class="dot hot"></i> heavy</span>
+  <span><i class="dot off"></i> unreachable</span>
+  <span class="refresh-info">Auto-refresh: 30s · Master push: every 5 min</span>
+</section>
+
+<main id="masters"></main>
+
+<footer>
+  Times in KST (Asia/Seoul). Each master pushes its snapshot every 5 minutes; reload to refetch.
+  Process owners are anonymized as <code>u_xxxxxx</code>.
+</footer>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

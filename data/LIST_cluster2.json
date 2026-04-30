@@ -1,20 +1,20 @@
 {
   "master_name": "LIST_cluster2",
-  "generated_at": "2026-04-30T06:21:39Z",
+  "generated_at": "2026-04-30T06:25:40Z",
   "nodes": [
     {
       "host": "LIST_cluster2",
       "description": "Cluster2",
       "is_master": true,
-      "cpu_percent": 0.8,
+      "cpu_percent": 0.7,
       "cpu_count": 12,
       "mem_total": 33308512256,
-      "mem_used": 5284417536,
-      "mem_percent": 21.4,
+      "mem_used": 5287239680,
+      "mem_percent": 21.5,
       "load": [
+        0.06,
         0.11,
-        0.17,
-        0.31
+        0.25
       ],
       "gpu": null,
       "gpu_error": "Driver Not Loaded",
@@ -36,20 +36,20 @@
       "host": "gpu3",
       "description": "RTX 8000 x8",
       "is_master": false,
-      "cpu_percent": 0.0,
+      "cpu_percent": 0.1,
       "cpu_count": 80,
       "mem_total": 134585933824,
-      "mem_used": 17382277120,
+      "mem_used": 17384574976,
       "mem_percent": 17.2,
       "load": [
-        0.18,
-        0.07,
-        0.07
+        0.08,
+        0.04,
+        0.05
       ],
       "gpu": {
         "hostname": "gpu3",
         "driver_version": "555.42.02",
-        "query_time": "2026-04-30T02:21:29.797048",
+        "query_time": "2026-04-30T02:25:30.437952",
         "gpus": [
           {
             "index": 0,
@@ -195,7 +195,7 @@
             "utilization.gpu": 0,
             "utilization.enc": 0,
             "utilization.dec": 0,
-            "power.draw": 16,
+            "power.draw": 13,
             "enforced.power.limit": 250,
             "memory.used": 2,
             "memory.total": 46080,
@@ -222,15 +222,15 @@
       "host": "cpu3",
       "description": "CPU only",
       "is_master": false,
-      "cpu_percent": 0.3,
+      "cpu_percent": 0.1,
       "cpu_count": 96,
       "mem_total": 134564962304,
-      "mem_used": 25438289920,
+      "mem_used": 25427283968,
       "mem_percent": 23.4,
       "load": [
-        0.69,
-        12.97,
-        16.17
+        0.17,
+        5.96,
+        12.55
       ],
       "gpu": null,
       "gpu_error": "Driver Not Loaded",
